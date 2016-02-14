@@ -138,7 +138,7 @@ public struct Mirror {
   @warn_unused_result
   static func _noSuperclassMirror() -> Mirror? { return nil }
 
-  /// Returns the legacy mirror representing the part of `subject`
+  /// Return the legacy mirror representing the part of `subject`
   /// corresponding to the superclass of `staticSubclass`.
   @warn_unused_result
   internal static func _legacyMirror(
@@ -343,7 +343,7 @@ public struct Mirror {
 /// you can make it conform to `CustomReflectable` and return a custom
 /// `Mirror`.
 public protocol CustomReflectable {
-  /// Returns the `Mirror` for `self`.
+  /// Return the `Mirror` for `self`.
   ///
   /// - Note: If `Self` has value semantics, the `Mirror` should be
   ///   unaffected by subsequent mutations of `self`.
@@ -375,7 +375,7 @@ extension Mirror {
     func customMirror() -> Mirror { return mirror }
   }
   
-  /// Returns a specific descendant of the reflected subject, or `nil`
+  /// Return a specific descendant of the reflected subject, or `nil`
   /// if no such descendant exists.
   ///
   /// A `String` argument selects the first `Child` with a matching label.
@@ -692,7 +692,7 @@ extension PlaygroundQuickLook {
 /// `CustomPlaygroundQuickLookable` and return a custom
 /// `PlaygroundQuickLook`.
 public protocol CustomPlaygroundQuickLookable {
-  /// Returns the `PlaygroundQuickLook` for `self`.
+  /// Return the `PlaygroundQuickLook` for `self`.
   ///
   /// - Note: If `Self` has value semantics, the `PlaygroundQuickLook` should
   ///   be unaffected by subsequent mutations of `self`.

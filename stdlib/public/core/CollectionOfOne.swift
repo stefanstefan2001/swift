@@ -64,7 +64,7 @@ public struct CollectionOfOne<Element> : CollectionType {
     return .One
   }
 
-  /// Returns a generator over the elements of this sequence.
+  /// Return a *generator* over the elements of this *sequence*.
   ///
   /// - Complexity: O(1).
   public func generate() -> GeneratorOfOne<Element> {
@@ -79,7 +79,7 @@ public struct CollectionOfOne<Element> : CollectionType {
     return element
   }
 
-  /// The number of elements (always one).
+  /// Return the number of elements (always one).
   public var count: Int {
     return 1
   }
